@@ -6,6 +6,7 @@ import {
   BackHandler,
   Platform,
 } from 'react-native';
+import SplashScreen from 'react-native-splash-screen';
 import configureStore, {AppWithNavigationState} from './store';
 import {Provider} from 'react-redux';
 import AppNavigator from './navigation';
@@ -16,6 +17,7 @@ class App extends Component {
     isLoading: true,
     store: configureStore(() => {
       this.setState({isLoading: false});
+      SplashScreen.hide();
       // if (Utils.isPlatformAndroid()) {
       //   NativeModules.SplashScreen.hide();
       // }
