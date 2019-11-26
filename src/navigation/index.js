@@ -7,6 +7,7 @@ import {
 import React, {Component} from 'react';
 import {View, Text} from 'react-native';
 import App1 from '../../App';
+import {Login,SignUp} from '../Containers'
 // import SplashScreen from 'react-native-splash-screen';
 // import
 
@@ -78,7 +79,9 @@ const DrawerStackNavigator = createStackNavigator(
 // );
 const AuthStack = createStackNavigator(
   {
-    App: App1,
+    SignUp:SignUp,
+    Login: Login,
+    
     // dashboard: Dashboard,
     // signup: SignUp,
     // login: Login,
