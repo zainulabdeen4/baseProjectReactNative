@@ -1,13 +1,13 @@
 // @flow
 
 import * as storage from 'redux-storage';
-import { createLogger } from 'redux-logger';
+import {createLogger} from 'redux-logger';
 import createSagaMiddleware from 'redux-saga';
 import filter from 'redux-storage-decorator-filter';
-import { createStore, applyMiddleware, combineReducers } from 'redux';
-import { composeWithDevTools } from 'remote-redux-devtools';
+import {createStore, applyMiddleware, combineReducers} from 'redux';
+import {composeWithDevTools} from 'remote-redux-devtools';
 import createEngine from 'redux-storage-engine-reactnativeasyncstorage';
-import { connect } from 'react-redux';
+import {connect} from 'react-redux';
 import AppNavigator from '../navigation';
 import {
   createReactNavigationReduxMiddleware,

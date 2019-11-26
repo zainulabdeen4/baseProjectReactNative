@@ -1,4 +1,4 @@
-import React, { Fragment, Component } from 'react';
+import React, {Fragment, Component} from 'react';
 import {
   View,
   StatusBar,
@@ -6,19 +6,19 @@ import {
   BackHandler,
   Platform,
 } from 'react-native';
-import configureStore, { AppWithNavigationState } from './src/store';
-import { Provider } from 'react-redux';
-import AppNavigator from './src/navigation';
-import { NavigationActions } from 'react-navigation';
-import KeyboardManager from 'react-native-keyboard-manager';
+import configureStore, {AppWithNavigationState} from './store';
+import {Provider} from 'react-redux';
+import AppNavigator from './navigation';
+import {NavigationActions} from 'react-navigation';
+// import KeyboardManager from 'react-native-keyboard-manager';
 class App extends Component {
   state = {
     isLoading: true,
     store: configureStore(() => {
-      this.setState({ isLoading: false });
-      if (Utils.isPlatformAndroid()) {
-        NativeModules.SplashScreen.hide();
-      }
+      this.setState({isLoading: false});
+      // if (Utils.isPlatformAndroid()) {
+      //   NativeModules.SplashScreen.hide();
+      // }
     }),
   };
 
@@ -34,8 +34,8 @@ class App extends Component {
   }
 
   onBackPress = () => {
-    const { dispatch, getState } = this.state.store;
-    const { nav } = getState();
+    const {dispatch, getState} = this.state.store;
+    const {nav} = getState();
     if (nav.index === 0) {
       return false;
     }
@@ -48,7 +48,7 @@ class App extends Component {
     if (this.state.isLoading) return null;
     else
       return (
-        <View style={{ flex: 1 }}>
+        <View style={{flex: 1}}>
           <StatusBar barStyle="light-content" backgroundColor="#F7B9A2" />
           <Provider store={this.state.store}>
             <AppWithNavigationState />

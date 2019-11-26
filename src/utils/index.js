@@ -1,11 +1,11 @@
 import _ from 'lodash';
 // import moment from "moment";
-import { Platform, Share, Linking, Alert, Keyboard } from 'react-native';
+import {Platform, Share, Linking, Alert, Keyboard} from 'react-native';
 // import { MessageBarManager } from "react-native-message-bar";
 // import { TIME_ZONE, DAY_DATE_FORMAT, DATE_FORMAT } from "../constants";
-import { Metrics } from '../theme';
-import * as firebase from 'react-native-firebase';
-import { ERROR_SOMETHING_WENT_WRONG } from '../config/WebService';
+import {Metrics} from '../theme';
+// import * as firebase from 'react-native-firebase';
+import {ERROR_SOMETHING_WENT_WRONG} from '../config/WebService';
 function deg2rad(deg) {
   return deg * (Math.PI / 180);
 }
