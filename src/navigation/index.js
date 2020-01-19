@@ -7,7 +7,7 @@ import {
 import React, {Component} from 'react';
 import {View, Text} from 'react-native';
 import App1 from '../../App';
-import {Login,SignUp} from '../Containers'
+import {Login,SignUp,Questions} from '../Containers'
 // import SplashScreen from 'react-native-splash-screen';
 // import
 
@@ -79,8 +79,12 @@ const DrawerStackNavigator = createStackNavigator(
 // );
 const AuthStack = createStackNavigator(
   {
-    SignUp:SignUp,
+    
     Login: Login,
+    SignUp:SignUp,
+    Questions:Questions
+    
+    
     
     // dashboard: Dashboard,
     // signup: SignUp,
@@ -95,4 +99,4 @@ const ApplicationStack = createSwitchNavigator({
   auth: AuthStack,
   drawerStack: App1,
 });
-export default createAppContainer(ApplicationStack);
+export default createAppContainer(AuthStack);

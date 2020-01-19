@@ -93,7 +93,9 @@ export default class Login extends React.Component {
                     </TouchableOpacity>
                 </View>
 
-                <TouchableOpacity style={{ width: "100%", height: 50, backgroundColor: "#2A71CD", borderRadius: 25, justifyContent: "center", alignItems: "center" }}>
+                <TouchableOpacity
+                onPress={()=>this.props.navigation.navigate("Questions")}
+                 style={{ width: "100%", height: 50, backgroundColor: "#2A71CD", borderRadius: 25, justifyContent: "center", alignItems: "center" }}>
                     <Text style={{ color: "white", fontSize: 14 }}>Sign in</Text>
                 </TouchableOpacity>
 

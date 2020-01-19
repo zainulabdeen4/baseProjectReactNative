@@ -51,7 +51,7 @@ class App extends Component {
     else
       return (
         <View style={{flex: 1}}>
-          <StatusBar barStyle="light-content" backgroundColor="#F7B9A2" />
+          <StatusBar barStyle="dark-content" backgroundColor="white" />
           <Provider store={this.state.store}>
             <AppWithNavigationState />
           </Provider>
